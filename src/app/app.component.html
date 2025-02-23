@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>display</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="crt bg just-green mat-typography">
+    <section>
+      <!-- <h1>Test</h1> -->
+      <p class="display-front bg">
+        <mat-card class="example-card">
+          <mat-card-header *ngIf="mytData">
+            <mat-card-title-group>
+              <mat-card-title>Penang</mat-card-title>
+              <mat-card-title>{{mytData.dayOfWeek}}</mat-card-title>
+              <mat-card-title>{{ currentTime$ | async }}</mat-card-title>
+            </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+            <!-- <div *ngIf="locationData weatherData">
+              <p><strong>Area:</strong> {{ locationData.name }}</p>
+              <p><strong>Weather:</strong> {{ weatherData.weather[0].main }}</p>
+              <p><strong>Temp:</strong> {{ (weatherData.main.temp - 273.15) | number:'1.2-2' }} °C</p>
+              <p><strong>Country:</strong> {{ weatherData.sys.country }}</p>
+            </div> -->
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="example-card">
+          <mat-card-header *ngIf="pstData">
+            <mat-card-title-group>
+              <mat-card-title>Oregon</mat-card-title>
+              <mat-card-title>{{pstData.dayOfWeek}}</mat-card-title>
+              <mat-card-title>{{ currentPSTTime$ | async }} </mat-card-title>
+            </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+          </mat-card-content>
+        </mat-card>
+      </p>
+    </section>
+  </body>
+</html>
